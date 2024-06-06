@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg colour changing</title>
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 10px;
+        }
+
+        body {
+            text-align: center;
+            margin-top: 20vh;
+        }
+
+        button {
+            width: 8vh;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Background colour changing</h1>
+    <p id="paragraph">Click on start to start changing colour and click on stop to pause it</p>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    // Selecting start and stop buttons
+    let startButton = document.querySelector('#start');
+    let stopButton = document.querySelector('#stop');
+
+    // Function to generate random color and change background
+    let colourchanging = function () {
+        var red = Math.floor(Math.random() * 256);
+        var green = Math.floor(Math.random() * 256);
+        var blue = Math.floor(Math.random() * 256);
+        var color = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+        document.body.style.backgroundColor = color;
+    }
+
+    // Event listener for start button
+    startButton.addEventListener('click', function () {
+        // Start interval for background color change
+        let intervalID = setInterval(colourchanging, 1000);
+
+        // Event listener for stop button to clear interval
+        stopButton.addEventListener('click', function () {
+            clearInterval(intervalID);
+        })
+    })
+</script>
+
+</html>

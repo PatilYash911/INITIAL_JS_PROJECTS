@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Local Time</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            background-color: black;
+
+        }
+
+        .clock {
+            text-align: center;
+        }
+
+        #text_clock {
+            margin-top: 30vh;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        #clock {
+            border: 4px solid white;
+            border-radius: 15px;
+            height: 90px;
+            width: 200px;
+            margin: auto;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding-top: 25px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="clock">
+        <div id="text_clock">Your local Time</div>
+        <div id="clock"></div>
+    </div>
+    <script src="1.time_display.js"></script>
+</body>
+
+</html>
